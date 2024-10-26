@@ -131,11 +131,13 @@
     <ClCompile Include="jobs.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Visitor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.h" />
     <ClInclude Include="IPerson.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Visitor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

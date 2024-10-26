@@ -4,8 +4,7 @@ namespace MuseumNamespace
 {
 	std::string Employee::InteractionWithVisitor(Person& visitor)
 	{
-		visitor.SetName("abc");
-		return "no interaction with visitor " + visitor.GetName();
+		return GetName() + ": no interaction with visitor " + visitor.GetName();
 	}
 
 	std::string Employee::AskAboutJob()
