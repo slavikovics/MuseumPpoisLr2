@@ -2,9 +2,9 @@
 
 namespace MuseumNamespace
 {
-	void Employee::IteractionWithVisitor()
+	std::string Employee::IteractionWithVisitor()
 	{
-
+		return "no interaction with visitor ";
 	}
 
 	Jobs Employee::GetJob()
@@ -17,6 +17,13 @@ namespace MuseumNamespace
 		_name = name;
 		_id = id;
 		_job = NoJob;
+	}
+
+	Employee::Employee(std::string name, int id, Jobs job)
+	{
+		_name = name;
+		_id = id;
+		_job = job;
 	}
 
 	int Employee::GetId()
