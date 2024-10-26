@@ -27,9 +27,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Employee.cpp">
+      <Filter>People</Filter>
+    </ClCompile>
+    <ClCompile Include="jobs.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IPerson.h">
+      <Filter>People</Filter>
+    </ClInclude>
+    <ClInclude Include="Employee.h">
       <Filter>People</Filter>
     </ClInclude>
   </ItemGroup>
