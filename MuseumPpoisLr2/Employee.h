@@ -1,31 +1,32 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
-#include "IPerson.h"
-#include "jobs.h"
+#include "Person.h"
 
 namespace MuseumNamespace
 {
-	class Employee : public IPerson
+	class Employee : public Person
 	{
 
-	protected:
+	private:
 
-		Jobs _job;
+		int _relationToJob;
 
 	public:
 
-		virtual std::string IteractionWithVisitor();
+		virtual std::string InteractionWithVisitor(Person& visitor);
 
-		Jobs GetJob();
+		virtual std::string GetJobAsString();
+
+		std::string GetRelationToJobAsString();
+
+		int GetRelationToJobAsInt();
+
+		std::string AskAboutJob();
 
 		Employee(std::string name, int id);
 
-		Employee(std::string name, int id, Jobs job);
-
-		virtual int GetId() override;
-
-		virtual std::string GetName() override;
+		Employee(std::string name, int id, int relationToJob);
 	};
 }
 

@@ -2,37 +2,50 @@
 
 namespace MuseumNamespace
 {
-	std::string Employee::IteractionWithVisitor()
+	std::string Employee::InteractionWithVisitor(Person& visitor)
 	{
-		return "no interaction with visitor ";
+		visitor.SetName("abc");
+		return "no interaction with visitor " + visitor.GetName();
 	}
 
-	Jobs Employee::GetJob()
+	std::string Employee::AskAboutJob()
 	{
-		return _job;
+		return "I " + GetRelationToJobAsString() + " my job.";
+	}
+
+	std::string Employee::GetJobAsString()
+	{
+		return "any";
+	}
+
+	std::string Employee::GetRelationToJobAsString()
+	{
+		switch (_relationToJob)
+		{
+			case 0: return "hate";
+			case 1: return "dislike";
+			case 2: return "am indifferent";
+			case 3: return "feel good about";
+			case 4: return "love";
+		}
+	}
+
+	int Employee::GetRelationToJobAsInt()
+	{
+		return _relationToJob;
 	}
 
 	Employee::Employee(std::string name, int id)
 	{
 		_name = name;
 		_id = id;
-		_job = NoJob;
+		_relationToJob = 2;	
 	}
 
-	Employee::Employee(std::string name, int id, Jobs job)
+	Employee::Employee(std::string name, int id, int relationToJob)
 	{
 		_name = name;
 		_id = id;
-		_job = job;
-	}
-
-	int Employee::GetId()
-	{
-		return _id;
-	}
-
-	std::string Employee::GetName()
-	{
-		return _name;
+		_relationToJob = relationToJob;
 	}
 }
