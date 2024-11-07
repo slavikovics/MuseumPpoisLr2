@@ -39,6 +39,9 @@
     <ClCompile Include="Visitor.cpp">
       <Filter>People</Filter>
     </ClCompile>
+    <ClCompile Include="Guard.cpp">
+      <Filter>People</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IPerson.h">
@@ -51,6 +54,9 @@
       <Filter>People</Filter>
     </ClInclude>
     <ClInclude Include="Visitor.h">
+      <Filter>People</Filter>
+    </ClInclude>
+    <ClInclude Include="Guard.h">
       <Filter>People</Filter>
     </ClInclude>
   </ItemGroup>

@@ -7,7 +7,7 @@ namespace MuseumNamespace
 	{
 	private:
 
-		bool _hasChages;
+		bool _hasChanges;
 
 		bool _hasThrownLitter;
 
@@ -30,6 +30,8 @@ namespace MuseumNamespace
 		void ThrowLitter();
 
 		void BrakeExhibit();
+
+		void SeeExhibit();
 
 		void BuySouvenir();
 

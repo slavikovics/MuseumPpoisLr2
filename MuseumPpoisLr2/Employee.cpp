@@ -23,7 +23,7 @@ namespace MuseumNamespace
 		{
 			case 0: return "hate";
 			case 1: return "dislike";
-			case 2: return "am indifferent";
+			case 2: return "am indifferent to";
 			case 3: return "feel good about";
 			case 4: return "love";
 		}
