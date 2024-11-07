@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PERSON_H
+#define PERSON_H
+
 #include "IPerson.h"
 
 namespace MuseumNamespace
@@ -19,5 +21,5 @@ namespace MuseumNamespace
 	};
 }
 
-
+#endif
 

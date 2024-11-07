@@ -2,52 +2,60 @@
 
 namespace MuseumNamespace
 {
-	void Visitor::BrakeExhibit()
+	std::string Visitor::BrakeExhibit()
 	{
 		_hasBrokenExhibit = true;
 		_hasChanges = true;
+		return GetName() + " broke exhibit";
 	}
 
-	void Visitor::SeeExhibit()
+	std::string Visitor::SeeExhibit()
 	{
 		_hasSeenExhibit = true;
 		_hasChanges = true;
+		return GetName() + " saw exhibit";
 	}
 
-	void Visitor::BuySouvenir()
+	std::string Visitor::BuySouvenir()
 	{
 		_hasBoughtSouvenir = true;
 		_hasChanges = true;
+		return GetName() + " bought souvenir";
 	}
 
-	void Visitor::BuyTicket()
+	std::string Visitor::BuyTicket()
 	{
 		_hasBoughtTicket = true;
 		_hasChanges = true;
+		return GetName() + " bought ticket";
 	}
 
-	void Visitor::EnterMuseum()
+	std::string Visitor::EnterMuseum()
 	{
 		_hasEnteredMuseum = true;
 		_hasChanges = true;
+		return GetName() + " entered museum";
 	}
 
-	void Visitor::ExitMuseum()
+	std::string Visitor::ExitMuseum()
 	{
 		_hasExitedMuseum = true;
 		_hasChanges = true;
+		return GetName() + " exited museum";
 	}
 
-	void Visitor::AskGuide()
+	std::string Visitor::AskGuide()
 	{
 		_hasAskedGuide = true;
 		_hasChanges = true;
+		return GetName() + " asked guide";
 	}
 
-	void Visitor::ThrowLitter()
+	std::string Visitor::ThrowLitter()
 	{
 		_hasThrownLitter = true;
 		_hasChanges = true;
+		return GetName() + " threw litter";
 	}
 
 	Visitor::Visitor(std::string name, int id)

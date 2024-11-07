@@ -22,13 +22,19 @@
     <Filter Include="Controllers">
       <UniqueIdentifier>{37cbf739-227b-42bf-9554-8f2ebb262c0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Museum">
+      <UniqueIdentifier>{28e463b2-ab8f-4d24-b73b-362a9794e75a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Employees">
+      <UniqueIdentifier>{bdfd7e8f-431c-4d99-9c2e-3aff5a0622fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Visitors">
+      <UniqueIdentifier>{95701e9b-9ac3-41bf-b0a9-5928491dd5ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Employee.cpp">
-      <Filter>People</Filter>
     </ClCompile>
     <ClCompile Include="jobs.h">
       <Filter>Source Files</Filter>
@@ -36,28 +42,52 @@
     <ClCompile Include="Person.cpp">
       <Filter>People</Filter>
     </ClCompile>
-    <ClCompile Include="Visitor.cpp">
-      <Filter>People</Filter>
+    <ClCompile Include="Employee.cpp">
+      <Filter>Employees</Filter>
     </ClCompile>
     <ClCompile Include="Guard.cpp">
-      <Filter>People</Filter>
+      <Filter>Employees</Filter>
+    </ClCompile>
+    <ClCompile Include="Visitor.cpp">
+      <Filter>Visitors</Filter>
+    </ClCompile>
+    <ClCompile Include="Museum.cpp">
+      <Filter>Museum</Filter>
+    </ClCompile>
+    <ClCompile Include="Guide.cpp">
+      <Filter>Employees</Filter>
+    </ClCompile>
+    <ClCompile Include="Cleaner.cpp">
+      <Filter>Employees</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IPerson.h">
       <Filter>People</Filter>
     </ClInclude>
-    <ClInclude Include="Employee.h">
-      <Filter>People</Filter>
-    </ClInclude>
     <ClInclude Include="Person.h">
       <Filter>People</Filter>
     </ClInclude>
-    <ClInclude Include="Visitor.h">
-      <Filter>People</Filter>
+    <ClInclude Include="Employee.h">
+      <Filter>Employees</Filter>
     </ClInclude>
     <ClInclude Include="Guard.h">
-      <Filter>People</Filter>
+      <Filter>Employees</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor.h">
+      <Filter>Visitors</Filter>
+    </ClInclude>
+    <ClInclude Include="Museum.h">
+      <Filter>Museum</Filter>
+    </ClInclude>
+    <ClInclude Include="Guide.h">
+      <Filter>Employees</Filter>
+    </ClInclude>
+    <ClInclude Include="Cleaner.h">
+      <Filter>Employees</Filter>
+    </ClInclude>
+    <ClInclude Include="Cashier.h">
+      <Filter>Employees</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

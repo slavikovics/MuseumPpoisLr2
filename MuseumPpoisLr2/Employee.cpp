@@ -34,11 +34,32 @@ namespace MuseumNamespace
 		return _relationToJob;
 	}
 
+	void Employee::SetRelationToJob(int newRelationToJob)
+	{
+		_relationToJob = newRelationToJob;
+	}
+
+	void Employee::SetMonthlyWage(double newMonthlyWage)
+	{
+		_monthlyWage = newMonthlyWage;
+	}
+
+	double Employee::GetMonthlyWage()
+	{
+		return _monthlyWage;
+	}
+
+	void Employee::IncreaseMonthlyWage(double increaseAmount)
+	{
+		_monthlyWage += increaseAmount;
+	}
+
 	Employee::Employee(std::string name, int id)
 	{
 		_name = name;
 		_id = id;
 		_relationToJob = 2;	
+		SetMonthlyWage(DefaultMonthlyWage);
 	}
 
 	Employee::Employee(std::string name, int id, int relationToJob)
@@ -46,5 +67,15 @@ namespace MuseumNamespace
 		_name = name;
 		_id = id;
 		_relationToJob = relationToJob;
+		SetMonthlyWage(DefaultMonthlyWage);
+	}
+
+	Employee::Employee(std::string name, int id, int relationToJob, double monthlyWage)
+	{
+		_name = name;
+		_id = id;
+		_relationToJob = relationToJob;
+		_monthlyWage = _monthlyWage;
+		SetMonthlyWage(monthlyWage);
 	}
 }

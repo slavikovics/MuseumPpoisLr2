@@ -5,7 +5,7 @@ namespace MuseumNamespace
 {
 	class Visitor : public Person
 	{
-	private:
+	protected:
 
 		bool _hasChanges;
 
@@ -27,21 +27,21 @@ namespace MuseumNamespace
 
 	public:
 
-		void ThrowLitter();
+		std::string ThrowLitter();
 
-		void BrakeExhibit();
+		std::string BrakeExhibit();
 
-		void SeeExhibit();
+		std::string SeeExhibit();
 
-		void BuySouvenir();
+		std::string BuySouvenir();
 
-		void BuyTicket();
+		std::string BuyTicket();
 
-		void EnterMuseum();
+		std::string EnterMuseum();
 
-		void ExitMuseum();
+		std::string ExitMuseum();
 
-		void AskGuide();
+		std::string AskGuide();
 
 		Visitor(std::string name, int id);
 	};

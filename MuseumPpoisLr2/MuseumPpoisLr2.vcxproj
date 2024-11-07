@@ -127,17 +127,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cleaner.cpp" />
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="Guide.cpp" />
     <ClCompile Include="jobs.h" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Museum.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Visitor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cashier.h" />
+    <ClInclude Include="Cleaner.h" />
     <ClInclude Include="Employee.h" />
     <ClInclude Include="Guard.h" />
+    <ClInclude Include="Guide.h" />
     <ClInclude Include="IPerson.h" />
+    <ClInclude Include="Museum.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Visitor.h" />
   </ItemGroup>

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Employee.h"
 #include "Guard.h"
+#include "Visitor.h"
 
 using namespace MuseumNamespace;
 
@@ -24,9 +25,12 @@ int main()
 	std::cout << "name: " << guard.GetName() << std::endl;
 	std::cout << "id: " << guard.GetId() << std::endl;
 	std::cout << "job: " << guard.AskAboutJob() << std::endl << std::endl;
-	std::cout << guard.InteractionWithVisitor(person) << std::endl << std::endl;;
+	std::cout << guard.InteractionWithVisitor(person) << std::endl << std::endl;
 
-	std::cout << person.GetName() << std::endl << std::endl;
+	Visitor visitor("Jane", 1);
+
+	std::cout << guard.InteractionWithVisitor(visitor) << std::endl;
+	std::cout << visitor.BrakeExhibit() << std::endl;
 
 	return 0;
 }
