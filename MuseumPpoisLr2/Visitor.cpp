@@ -6,21 +6,21 @@ namespace MuseumNamespace
 	{
 		_hasBrokenExhibit = true;
 		exhibit.Brake();
-		return GetName() + " broke exhibit " + exhibit.GetName();
+		return GetName() + " broke exhibit";
 	}
 
 	std::string Visitor::BuySouvenir(BuyableItem& souvenir, BankAccount& bankAccount)
 	{
 		_hasBoughtSouvenir = true;
 		bankAccount.IncreaseBalance(souvenir._price);
-		return GetName() + " bought souvenir " + souvenir.GetName();
+		return GetName() + " bought souvenir";
 	}
 
 	std::string Visitor::BuyTicket(const BuyableItem& ticket, BankAccount& bankAccount)
 	{
 		_hasBoughtTicket = true;
 		bankAccount.IncreaseBalance(ticket._price);
-		return GetName() + " bought ticket for " + std::to_string(ticket._price);
+		return GetName() + " bought ticket";
 	}
 
 	std::string Visitor::AskGuide()
