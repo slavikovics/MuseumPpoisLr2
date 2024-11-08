@@ -20,6 +20,7 @@ namespace MuseumNamespace
 		void HireEmployee();
 
 		void FireEmplyee();
+
 	};
 }
 

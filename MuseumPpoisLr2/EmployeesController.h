@@ -5,6 +5,7 @@
 #include "Guard.h"
 #include "Guide.h"
 #include <list>
+#include "PersonNotFoundException.h"
 
 namespace MuseumNamespace
 {
@@ -33,5 +34,7 @@ namespace MuseumNamespace
 		std::list<Employee*> GetAllEmployees();
 
 		std::string GetAllEmployeesData();
+
+		bool CheckIdIsUniqueAndAcceptable(int id);
 	};
 }

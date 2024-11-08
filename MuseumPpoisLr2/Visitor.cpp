@@ -58,6 +58,29 @@ namespace MuseumNamespace
 		return GetName() + " threw litter";
 	}
 
+	std::string Visitor::GetVisitorData()
+	{
+		return "Visitor: my id is: " + std::to_string(GetId()) + ", my Name is: "
+			+ GetName() + ".\n";
+	}
+
+	bool Visitor::operator==(const Visitor& visitor) const
+	{
+		if (_name == visitor._name && _id == visitor._id) return true;
+		return false;
+	}
+
+	bool Visitor::operator!=(const Visitor& visitor)
+	{
+		return !Visitor::operator==(visitor);
+	}
+
+	Visitor& Visitor::operator=(const Visitor& visitor)
+	{
+		Visitor newVisitor(visitor._name, visitor._id);
+		return newVisitor;
+	}
+
 	Visitor::Visitor(std::string name, int id)
 	{
 		_name = name;

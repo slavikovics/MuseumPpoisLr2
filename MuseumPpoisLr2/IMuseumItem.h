@@ -1,11 +1,11 @@
-#ifndef IPERSON_H
-#define IPERSON_H
+#ifndef I_MUSEUM_ITEM_H
+#define I_MUSEUM_ITEM_H
 
 #include <string>
 
 namespace MuseumNamespace
 {
-	class IPerson
+	class IMuseumItem
 	{
 	protected:
 

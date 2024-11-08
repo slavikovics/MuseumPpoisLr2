@@ -43,6 +43,14 @@ namespace MuseumNamespace
 
 		std::string AskGuide();
 
+		std::string GetVisitorData();
+
+		bool operator==(const Visitor& visitor)const;
+
+		bool operator!=(const Visitor& visitor);
+
+		Visitor& operator=(const Visitor& visitor);
+
 		Visitor(std::string name, int id);
 	};
 }

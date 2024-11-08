@@ -1,11 +1,11 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include "IPerson.h"
+#include "IMuseumItem.h"
 
 namespace MuseumNamespace
 {
-	class Person : public IPerson
+	class Person : public IMuseumItem
 	{
 	public:
 

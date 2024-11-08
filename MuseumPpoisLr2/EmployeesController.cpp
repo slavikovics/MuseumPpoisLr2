@@ -1,9 +1,15 @@
 #include "EmployeesController.h"
+#include "PersonNotFoundException.h"
+#include "IdNotAcceptableException.h"
 
 namespace MuseumNamespace
 {
 	void EmployeesController::AddEmployee(Employee* employee)
 	{
+		if (!CheckIdIsUniqueAndAcceptable(employee->GetId()))
+		{
+			throw IdNotAcceptableException(employee->GetId(), employee->GetName());
+		}
 		_employees.push_back(employee);
 	}
 
@@ -65,7 +71,7 @@ namespace MuseumNamespace
 			}
 		}
 
-		throw __ExceptionPtrAssign;
+		throw PersonNotFoundException(id);
 	}
 
 	Employee* EmployeesController::FindEmployeeByName(std::string name)
@@ -77,6 +83,8 @@ namespace MuseumNamespace
 				return employee;
 			}
 		}
+
+		throw PersonNotFoundException(name);
 	}
 
 	std::list<Employee*> EmployeesController::GetAllEmployees()
@@ -94,6 +102,12 @@ namespace MuseumNamespace
 		}
 
 		return output;
+	}
+
+	bool EmployeesController::CheckIdIsUniqueAndAcceptable(int id)
+	{
+		if (id <= 0) return false;
+		return !HasEmployeeWithId(id);
 	}
 }
 

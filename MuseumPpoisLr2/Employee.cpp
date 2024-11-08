@@ -14,7 +14,7 @@ namespace MuseumNamespace
 
 	std::string Employee::GetEmployeeData()
 	{
-		return "My id is: " + std::to_string(GetId()) + ", my Name is: "
+		return "Employee: my id is: " + std::to_string(GetId()) + ", my Name is: "
 			+ GetName() + ", my job is: " + GetJobAsString()
 			+ ". " + AskAboutJob() + "\n";;
 	}
@@ -41,6 +41,7 @@ namespace MuseumNamespace
 			case 2: return "am indifferent to";
 			case 3: return "feel good about";
 			case 4: return "love";
+			default: return "undefined";
 		}
 	}
 
@@ -101,7 +102,7 @@ namespace MuseumNamespace
 
 	bool Employee::operator!=(const Employee& employee)
 	{
-		return false;
+		return !Employee::operator==(employee);
 	}
 
 	Employee& Employee::operator=(const Employee& employee)
