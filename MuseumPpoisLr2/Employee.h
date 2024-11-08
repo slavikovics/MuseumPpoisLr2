@@ -36,6 +36,8 @@ namespace MuseumNamespace
 
 		std::string AskAboutJob();
 
+		std::string GetEmployeeData();
+
 		Employee();
 
 		Employee(std::string name, int id);

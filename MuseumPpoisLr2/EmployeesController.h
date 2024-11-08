@@ -12,11 +12,11 @@ namespace MuseumNamespace
 	{
 	private:
 		
-		std::list<Employee> _employees;
+		std::list<Employee*> _employees;
 
 	public:
 
-		void AddEmployee(Employee employee);
+		void AddEmployee(Employee* employee);
 
 		void RemoveEmployeeById(int employeeId);
 
@@ -26,11 +26,11 @@ namespace MuseumNamespace
 
 		bool HasEmployeeWithName(std::string name);
 
-		Employee& FindEmployeeById(int id);
+		Employee* FindEmployeeById(int id);
 
-		Employee& FindEmployeeByName(std::string name);
+		Employee* FindEmployeeByName(std::string name);
 
-		std::list<Employee>& GetAllEmployees();
+		std::list<Employee*> GetAllEmployees();
 
 		std::string GetAllEmployeesData();
 	};
