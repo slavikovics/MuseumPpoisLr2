@@ -134,6 +134,7 @@
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="EmployeesController.cpp" />
     <ClCompile Include="Exhibit.cpp" />
+    <ClCompile Include="ExhibitsController.cpp" />
     <ClCompile Include="Guard.cpp" />
     <ClCompile Include="Guide.cpp" />
     <ClCompile Include="IdNotAcceptableException.cpp" />

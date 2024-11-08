@@ -5,7 +5,7 @@
 
 namespace MuseumNamespace
 {
-	class Exhibit : IMuseumItem
+	class Exhibit : public IMuseumItem
 	{
 	private:
 
@@ -35,6 +35,8 @@ namespace MuseumNamespace
 
 		void SetOriginCountry(std::string originCountry);
 
+		std::string GetExhibitData();
+
 		int GetYearOfFirstAppearingInHistoricalSources();
 
 		void SetYearOfFirstAppearingInHistoricalSources(int yearOfFirstAppearingInHistoricalSources);
@@ -42,6 +44,12 @@ namespace MuseumNamespace
 		Exhibit(int id, std::string name);
 
 		Exhibit(int id, std::string name, std::string _description, std::string _originCountry, int _yearOfFirstAppearingInHistoricalSources);
+
+		bool operator==(const Exhibit& exhibit)const;
+
+		bool operator!=(const Exhibit& exhibit);
+
+		Exhibit& operator=(const Exhibit& exhibit);
 	};
 }
 

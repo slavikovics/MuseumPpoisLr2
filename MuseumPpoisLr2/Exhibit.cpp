@@ -42,6 +42,12 @@ namespace MuseumNamespace
 		_originCountry = originCountry;
 	}
 
+	std::string Exhibit::GetExhibitData()
+	{
+		return "Exhibit: " + GetName() + ", with id: " + std::to_string(GetId()) + ", description: " + GetDescription() + ", from country: " 
+			+ GetOriginCountry() + ", has appeares in: " + std::to_string(GetYearOfFirstAppearingInHistoricalSources()) + ".\n";
+	}
+
 	int Exhibit::GetYearOfFirstAppearingInHistoricalSources()
 	{
 		return _yearOfFirstAppearingInHistoricalSources;
@@ -70,6 +76,29 @@ namespace MuseumNamespace
 		_originCountry = originCountry;
 		_yearOfFirstAppearingInHistoricalSources = yearOfFirstAppearingInHistoricalSources;
 		_isBroken = false;
+	}
+
+	bool Exhibit::operator==(const Exhibit& exhibit) const
+	{
+		if (_name == exhibit._name && 
+			_id == exhibit._id && 
+			_description == exhibit._description && 
+			_originCountry == exhibit._originCountry &&
+			_yearOfFirstAppearingInHistoricalSources == exhibit._yearOfFirstAppearingInHistoricalSources &&
+			_isBroken == exhibit._isBroken) return true;
+
+		return false;
+	}
+
+	bool Exhibit::operator!=(const Exhibit& exhibit)
+	{
+		return !Exhibit::operator==(exhibit);
+	}
+
+	Exhibit& Exhibit::operator=(const Exhibit& exhibit)
+	{
+		Exhibit newExhibit(exhibit._id, exhibit._name, exhibit._description, exhibit._originCountry, exhibit._yearOfFirstAppearingInHistoricalSources);
+		return newExhibit;
 	}
 }
 

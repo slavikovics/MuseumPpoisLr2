@@ -12,6 +12,8 @@ namespace MuseumNamespace
 
 		IdNotAcceptableException(int personId, std::string personName);
 
+		std::string GetMessage();
+
 		virtual const char* what() const noexcept override;
 
 	private:
