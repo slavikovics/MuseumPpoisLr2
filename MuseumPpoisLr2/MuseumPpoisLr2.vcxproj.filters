@@ -49,6 +49,18 @@
     <Filter Include="Visitor">
       <UniqueIdentifier>{95701e9b-9ac3-41bf-b0a9-5928491dd5ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Items\BuyableItem">
+      <UniqueIdentifier>{933af581-6854-4bb8-abfd-27354e7a62f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Items\Exhibit">
+      <UniqueIdentifier>{31a4c760-bb04-4764-b6a1-e1e760599912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BankAccount">
+      <UniqueIdentifier>{75c2eb88-c706-466a-bdf5-ba897111ba94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controllers\ExhibitsController">
+      <UniqueIdentifier>{e56d4c80-3334-452d-b51e-110ed222c416}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Person.cpp">
@@ -89,8 +101,15 @@
     <ClCompile Include="PersonNotFoundException.cpp">
       <Filter>Exceptions\PersonNotFoundException</Filter>
     </ClCompile>
-    <ClCompile Include="Exhibit.cpp" />
-    <ClCompile Include="BuyableItem.cpp" />
+    <ClCompile Include="BuyableItem.cpp">
+      <Filter>Items\BuyableItem</Filter>
+    </ClCompile>
+    <ClCompile Include="Exhibit.cpp">
+      <Filter>Items\Exhibit</Filter>
+    </ClCompile>
+    <ClCompile Include="BankAccount.cpp">
+      <Filter>BankAccount</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -133,10 +152,13 @@
       <Filter>Items</Filter>
     </ClInclude>
     <ClInclude Include="BuyableItem.h">
-      <Filter>Items</Filter>
+      <Filter>Items\BuyableItem</Filter>
     </ClInclude>
     <ClInclude Include="Exhibit.h">
-      <Filter>Items</Filter>
+      <Filter>Items\Exhibit</Filter>
+    </ClInclude>
+    <ClInclude Include="BankAccount.h">
+      <Filter>BankAccount</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BankAccount.cpp" />
     <ClCompile Include="BuyableItem.cpp" />
     <ClCompile Include="Cashier.cpp" />
     <ClCompile Include="Cleaner.cpp" />
@@ -145,6 +146,7 @@
     <ClCompile Include="VisitorsController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BankAccount.h" />
     <ClInclude Include="BuyableItem.h" />
     <ClInclude Include="Cashier.h" />
     <ClInclude Include="Cleaner.h" />
