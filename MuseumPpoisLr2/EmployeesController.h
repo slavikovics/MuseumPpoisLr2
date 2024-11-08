@@ -5,11 +5,12 @@
 #include "Guard.h"
 #include "Guide.h"
 #include <list>
+#include "IController.h"
 #include "PersonNotFoundException.h"
 
 namespace MuseumNamespace
 {
-	class EmployeesController
+	class EmployeesController : public IController
 	{
 	private:
 		
@@ -19,13 +20,13 @@ namespace MuseumNamespace
 
 		void AddEmployee(Employee* employee);
 
-		void RemoveEmployeeById(int employeeId);
+		virtual void RemoveObjectById(int employeeId) override;
 
-		void RemoveEmployeeByName(std::string name);
+		virtual void RemoveObjectByName(std::string name) override;
 
-		bool HasEmployeeWithId(int id);
+		virtual bool HasObjectWithId(int id) override;
 
-		bool HasEmployeeWithName(std::string name);
+		virtual bool HasObjectWithName(std::string name) override;
 
 		Employee* FindEmployeeById(int id);
 
@@ -33,8 +34,8 @@ namespace MuseumNamespace
 
 		std::list<Employee*> GetAllEmployees();
 
-		std::string GetAllEmployeesData();
+		virtual std::string GetAllObjectsData() override;
 
-		bool CheckIdIsUniqueAndAcceptable(int id);
+		virtual bool CheckIdIsUniqueAndAcceptable(int id) override;
 	};
 }

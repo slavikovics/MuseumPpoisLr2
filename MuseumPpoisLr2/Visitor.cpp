@@ -2,59 +2,36 @@
 
 namespace MuseumNamespace
 {
-	std::string Visitor::BrakeExhibit()
+	std::string Visitor::BrakeExhibit(Exhibit& exhibit)
 	{
 		_hasBrokenExhibit = true;
-		_hasChanges = true;
-		return GetName() + " broke exhibit";
+		exhibit.Brake();
+		return GetName() + " broke exhibit " + exhibit.GetName();
 	}
 
-	std::string Visitor::SeeExhibit()
-	{
-		_hasSeenExhibit = true;
-		_hasChanges = true;
-		return GetName() + " saw exhibit";
-	}
-
-	std::string Visitor::BuySouvenir()
+	std::string Visitor::BuySouvenir(BuyableItem& souvenir, BankAccount& bankAccount)
 	{
 		_hasBoughtSouvenir = true;
-		_hasChanges = true;
-		return GetName() + " bought souvenir";
+		bankAccount.IncreaseBalance(souvenir._price);
+		return GetName() + " bought souvenir " + souvenir.GetName();
 	}
 
-	std::string Visitor::BuyTicket()
+	std::string Visitor::BuyTicket(const BuyableItem& ticket, BankAccount& bankAccount)
 	{
 		_hasBoughtTicket = true;
-		_hasChanges = true;
-		return GetName() + " bought ticket";
-	}
-
-	std::string Visitor::EnterMuseum()
-	{
-		_hasEnteredMuseum = true;
-		_hasChanges = true;
-		return GetName() + " entered museum";
-	}
-
-	std::string Visitor::ExitMuseum()
-	{
-		_hasExitedMuseum = true;
-		_hasChanges = true;
-		return GetName() + " exited museum";
+		bankAccount.IncreaseBalance(ticket._price);
+		return GetName() + " bought ticket for " + std::to_string(ticket._price);
 	}
 
 	std::string Visitor::AskGuide()
 	{
 		_hasAskedGuide = true;
-		_hasChanges = true;
 		return GetName() + " asked guide";
 	}
 
 	std::string Visitor::ThrowLitter()
 	{
 		_hasThrownLitter = true;
-		_hasChanges = true;
 		return GetName() + " threw litter";
 	}
 
@@ -88,11 +65,7 @@ namespace MuseumNamespace
 		_hasBrokenExhibit = false;
 		_hasBoughtSouvenir = false;
 		_hasBoughtTicket = false;
-		_hasEnteredMuseum = false;
-		_hasExitedMuseum = false;
 		_hasAskedGuide = false;
 		_hasThrownLitter = false;
-		_hasChanges = false;
-		_hasSeenExhibit = true;
 	}
 }

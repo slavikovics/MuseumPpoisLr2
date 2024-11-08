@@ -1,13 +1,17 @@
-#pragma once
+#ifndef VISITOR_H
+#define VISITOR_H
+
 #include "Person.h"
+#include "Exhibit.h"
+#include "BuyableItem.h"
+#include "Guide.h"
+#include "BankAccount.h"
 
 namespace MuseumNamespace
 {
 	class Visitor : public Person
 	{
-	protected:
-
-		bool _hasChanges;
+	public:
 
 		bool _hasThrownLitter;
 
@@ -15,31 +19,17 @@ namespace MuseumNamespace
 
 		bool _hasBoughtSouvenir;
 
-		bool _hasSeenExhibit;
-
 		bool _hasBoughtTicket;
-
-		bool _hasEnteredMuseum;
-
-		bool _hasExitedMuseum;
 
 		bool _hasAskedGuide;
 
-	public:
-
 		std::string ThrowLitter();
 
-		std::string BrakeExhibit();
+		std::string BrakeExhibit(Exhibit& exhibit);
 
-		std::string SeeExhibit();
+		std::string BuySouvenir(BuyableItem& souvenir, BankAccount& bankAccount);
 
-		std::string BuySouvenir();
-
-		std::string BuyTicket();
-
-		std::string EnterMuseum();
-
-		std::string ExitMuseum();
+		std::string BuyTicket(const BuyableItem& ticket, BankAccount& bankAccount);
 
 		std::string AskGuide();
 
@@ -55,5 +45,5 @@ namespace MuseumNamespace
 	};
 }
 
-
+#endif
 

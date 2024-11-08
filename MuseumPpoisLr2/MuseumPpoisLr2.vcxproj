@@ -157,6 +157,7 @@
     <ClInclude Include="ExhibitsController.h" />
     <ClInclude Include="Guard.h" />
     <ClInclude Include="Guide.h" />
+    <ClInclude Include="IController.h" />
     <ClInclude Include="IdNotAcceptableException.h" />
     <ClInclude Include="IMuseumItem.h" />
     <ClInclude Include="Museum.h" />

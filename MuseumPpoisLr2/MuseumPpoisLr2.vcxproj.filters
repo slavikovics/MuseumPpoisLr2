@@ -110,7 +110,9 @@
     <ClCompile Include="BankAccount.cpp">
       <Filter>BankAccount</Filter>
     </ClCompile>
-    <ClCompile Include="ExhibitsController.cpp" />
+    <ClCompile Include="ExhibitsController.cpp">
+      <Filter>Controllers\ExhibitsController</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -163,6 +165,9 @@
     </ClInclude>
     <ClInclude Include="ExhibitsController.h">
       <Filter>Controllers\ExhibitsController</Filter>
+    </ClInclude>
+    <ClInclude Include="IController.h">
+      <Filter>Controllers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

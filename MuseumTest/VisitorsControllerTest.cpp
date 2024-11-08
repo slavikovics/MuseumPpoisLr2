@@ -35,11 +35,11 @@ TEST(VisitorsControllerTest, HasVisitorWithIdTest)
 	employeesController.AddVisitor(e1);
 	employeesController.AddVisitor(e2);
 
-	EXPECT_EQ(employeesController.HasVisitorWithId(1), true);
-	EXPECT_EQ(employeesController.HasVisitorWithId(10), false);
+	EXPECT_EQ(employeesController.HasObjectWithId(1), true);
+	EXPECT_EQ(employeesController.HasObjectWithId(10), false);
 
-	EXPECT_EQ(employeesController.HasVisitorWithName("e2"), true);
-	EXPECT_EQ(employeesController.HasVisitorWithName("e3"), false);
+	EXPECT_EQ(employeesController.HasObjectWithName("e2"), true);
+	EXPECT_EQ(employeesController.HasObjectWithName("e3"), false);
 }
 
 TEST(VisitorsControllerTest, GetAllVisitorsTest)
@@ -65,7 +65,7 @@ TEST(VisitorsControllerTest, GetAllVisitorsDataTest)
 	employeesController.AddVisitor(e1);
 	employeesController.AddVisitor(e2);
 
-	EXPECT_EQ(employeesController.GetAllVisitorsData(), "visitors list:\n" + e1->GetVisitorData() + e2->GetVisitorData());
+	EXPECT_EQ(employeesController.GetAllObjectsData(), "visitors list:\n" + e1->GetVisitorData() + e2->GetVisitorData());
 }
 
 TEST(VisitorsControllerTest, RemoveVisitorTest)
@@ -78,11 +78,11 @@ TEST(VisitorsControllerTest, RemoveVisitorTest)
 	employeesController.AddVisitor(e1);
 	employeesController.AddVisitor(e2);
 
-	employeesController.RemoveVisitorById(1);
+	employeesController.RemoveObjectById(1);
 
-	EXPECT_EQ(employeesController.HasVisitorWithId(1), false);
-	EXPECT_EQ(employeesController.HasVisitorWithId(2), true);
+	EXPECT_EQ(employeesController.HasObjectWithId(1), false);
+	EXPECT_EQ(employeesController.HasObjectWithId(2), true);
 
-	EXPECT_EQ(employeesController.HasVisitorWithName("e1"), false);
-	EXPECT_EQ(employeesController.HasVisitorWithName("e2"), true);
+	EXPECT_EQ(employeesController.HasObjectWithName("e1"), false);
+	EXPECT_EQ(employeesController.HasObjectWithName("e2"), true);
 }

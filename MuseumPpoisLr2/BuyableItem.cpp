@@ -4,12 +4,12 @@ namespace MuseumNamespace
 {
     std::string BuyableItem::GetName()
     {
-        return std::string();
+        return _name;
     }
 
     int BuyableItem::GetId()
     {
-        return 0;
+        return _id;
     }
 
     BuyableItem::BuyableItem(int id, std::string name, double price)

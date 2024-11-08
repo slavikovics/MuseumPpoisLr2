@@ -13,7 +13,7 @@ namespace MuseumNamespace
 		_employees.push_back(employee);
 	}
 
-	void EmployeesController::RemoveEmployeeById(int employeeId)
+	void EmployeesController::RemoveObjectById(int employeeId)
 	{
 		for (Employee* employee : _employees)
 		{
@@ -25,7 +25,7 @@ namespace MuseumNamespace
 		}
 	}
 
-	void EmployeesController::RemoveEmployeeByName(std::string employeeName)
+	void EmployeesController::RemoveObjectByName(std::string employeeName)
 	{
 		for (Employee* employee : _employees)
 		{
@@ -37,7 +37,7 @@ namespace MuseumNamespace
 		}
 	}
 
-	bool EmployeesController::HasEmployeeWithId(int employeeId)
+	bool EmployeesController::HasObjectWithId(int employeeId)
 	{
 		for (Employee* employee : _employees)
 		{
@@ -49,7 +49,7 @@ namespace MuseumNamespace
 		return false;
 	}
 
-	bool EmployeesController::HasEmployeeWithName(std::string employeeName)
+	bool EmployeesController::HasObjectWithName(std::string employeeName)
 	{
 		for (Employee* employee : _employees)
 		{
@@ -92,7 +92,7 @@ namespace MuseumNamespace
 		return _employees;
 	}
 
-	std::string EmployeesController::GetAllEmployeesData()
+	std::string EmployeesController::GetAllObjectsData()
 	{
 		std::string output = "employees list:\n";
 
@@ -107,7 +107,7 @@ namespace MuseumNamespace
 	bool EmployeesController::CheckIdIsUniqueAndAcceptable(int id)
 	{
 		if (id <= 0) return false;
-		return !HasEmployeeWithId(id);
+		return !HasObjectWithId(id);
 	}
 }
 

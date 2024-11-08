@@ -1,6 +1,9 @@
 #ifndef BANK_ACCOUNT_H
 #define BANK_ACCOUNT_H
 
+#include "EmployeesController.h"
+#include <list>
+
 namespace MuseumNamespace
 {
 	class BankAccount
@@ -13,9 +16,13 @@ namespace MuseumNamespace
 
 		BankAccount(double startingAmountOfMoney);
 
+		BankAccount();
+
 		void IncreaseBalance(double offset);
 
 		void DecreaseBalance(double offset);
+
+		void CountMonthlyCostOfWages(EmployeesController& employeesController);
 
 		double GetMoney();
 

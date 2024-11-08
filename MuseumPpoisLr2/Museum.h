@@ -2,6 +2,10 @@
 #define MUSEUM_H
 
 #include <string>
+#include "EmployeesController.h"
+#include "VisitorsController.h"
+#include "ExhibitsController.h"
+#include "BankAccount.h"
 
 namespace MuseumNamespace
 {
@@ -9,18 +13,27 @@ namespace MuseumNamespace
 	{
 	public:
 
+		EmployeesController employeesController;
+
+		VisitorsController visitorsController;
+
+		ExhibitsController exhibitsController;
+
+		BankAccount bankAccount;
+
+		Museum();
+
 		void Open();
 
 		void Close();
 
-		void AddExhibitionRoom();
+		void HireEmployees();
 
-		void DeleteExhibitionRoom();
+		void FireEmployees();
 
-		void HireEmployee();
+		void UpdateVisitorsStatuses();
 
-		void FireEmplyee();
-
+		void CalendarMonthEnded();
 	};
 }
 

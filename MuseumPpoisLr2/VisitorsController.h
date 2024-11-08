@@ -2,6 +2,7 @@
 #define VISITORS_CONTROLLER_H
 
 #include "Visitor.h"
+#include "IController.h"
 #include <list>
 
 namespace MuseumNamespace
@@ -16,13 +17,13 @@ namespace MuseumNamespace
 
 		void AddVisitor(Visitor* visitor);
 
-		void RemoveVisitorById(int visitorId);
+		void RemoveObjectById(int visitorId);
 
-		void RemoveVisitorByName(std::string name);
+		void RemoveObjectByName(std::string name);
 
-		bool HasVisitorWithId(int visitorId);
+		bool HasObjectWithId(int visitorId);
 
-		bool HasVisitorWithName(std::string visitorName);
+		bool HasObjectWithName(std::string visitorName);
 
 		Visitor* FindVisitorById(int id);
 
@@ -30,9 +31,13 @@ namespace MuseumNamespace
 
 		std::list<Visitor*> GetAllVisitors();
 
-		std::string GetAllVisitorsData();
+		std::string GetAllObjectsData();
 		
 		bool CheckIdIsUniqueAndAcceptable(int id);
+
+		std::string CheckLitter(EmployeesController& employeesController);
+
+		std::string CheckGuideAskedAssistance(EmployeesController& employeesController);
 	};
 }
 

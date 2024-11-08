@@ -1,11 +1,12 @@
 #ifndef EXHIBITS_CONTROLLER_H
 #define EXHIBITS_CONTROLLER_H
 #include "Exhibit.h"
+#include "IController.h"
 #include <list>
 
 namespace MuseumNamespace
 {
-	class ExhibitsController
+	class ExhibitsController : public IController
 	{
 	private:
 
@@ -15,15 +16,21 @@ namespace MuseumNamespace
 		
 		void AddExhibit(Exhibit* exhibit);
 
-		void RemoveExhibitById(int exhibitId);
+		virtual void RemoveObjectById(int exhibitId);
 
-		std::string GetAllExhibitsData();
+		virtual void RemoveObjectByName(std::string objectName);
+
+		virtual bool HasObjectWithId(int objectId);
+
+		virtual bool HasObjectWithName(std::string objectName);
+
+		std::string GetAllObjectsData();
 
 		std::list<Exhibit*> GetExhibitsByCountryName(std::string countryName);
 
-		std::list<Exhibit*> GetExhibitsByYearOfFirstAppearing(std::string yearOfFirstAppearing);
+		std::list<Exhibit*> GetExhibitsByYearOfFirstAppearing(int yearOfFirstAppearing);
 
-
+		virtual bool CheckIdIsUniqueAndAcceptable(int id) override;
 	};
 }
 

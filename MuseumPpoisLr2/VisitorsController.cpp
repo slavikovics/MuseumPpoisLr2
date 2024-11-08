@@ -13,7 +13,7 @@ namespace MuseumNamespace
 		_visitors.push_back(visitor);
 	}
 
-	void VisitorsController::RemoveVisitorById(int visitorId)
+	void VisitorsController::RemoveObjectById(int visitorId)
 	{
 		for (Visitor* visitor : _visitors)
 		{
@@ -25,7 +25,7 @@ namespace MuseumNamespace
 		}
 	}
 
-	void VisitorsController::RemoveVisitorByName(std::string visitorName)
+	void VisitorsController::RemoveObjectByName(std::string visitorName)
 	{
 		for (Visitor* visitor : _visitors)
 		{
@@ -37,7 +37,7 @@ namespace MuseumNamespace
 		}
 	}
 
-	bool VisitorsController::HasVisitorWithId(int visitorId)
+	bool VisitorsController::HasObjectWithId(int visitorId)
 	{
 		for (Visitor* visitor : _visitors)
 		{
@@ -49,7 +49,7 @@ namespace MuseumNamespace
 		return false;
 	}
 
-	bool VisitorsController::HasVisitorWithName(std::string visitorName)
+	bool VisitorsController::HasObjectWithName(std::string visitorName)
 	{
 		for (Visitor* visitor : _visitors)
 		{
@@ -92,7 +92,7 @@ namespace MuseumNamespace
 		return _visitors;
 	}
 
-	std::string VisitorsController::GetAllVisitorsData()
+	std::string VisitorsController::GetAllObjectsData()
 	{
 		std::string output = "visitors list:\n";
 
@@ -107,6 +107,48 @@ namespace MuseumNamespace
 	bool VisitorsController::CheckIdIsUniqueAndAcceptable(int id)
 	{
 		if (id <= 0) return false;
-		return !HasVisitorWithId(id);
+		return !HasObjectWithId(id);
+	}
+
+	std::string VisitorsController::CheckLitter(EmployeesController& employeesController)
+	{
+		std::string emplyeesResponce = "";
+
+		for (Visitor* visitor : _visitors)
+		{
+			if (visitor->_hasBrokenExhibit || visitor->_hasThrownLitter)
+			{
+				for (Employee* employee : employeesController.GetAllEmployees())
+				{ 
+					if (employee->GetJobAsString() == "cleaner")
+					{
+						emplyeesResponce += employee->InteractionWithVisitor(*visitor);
+					}
+				}
+			}
+		}
+
+		return emplyeesResponce;
+	}
+
+	std::string VisitorsController::CheckGuideAskedAssistance(EmployeesController& employeesController)
+	{
+		std::string emplyeesResponce = "";
+
+		for (Visitor* visitor : _visitors)
+		{
+			if (visitor->_hasAskedGuide)
+			{
+				for (Employee* employee : employeesController.GetAllEmployees())
+				{
+					if (employee->GetJobAsString() == "guide")
+					{
+						emplyeesResponce += employee->InteractionWithVisitor(*visitor);
+					}
+				}
+			}
+		}
+
+		return emplyeesResponce;
 	}
 }

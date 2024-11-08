@@ -35,11 +35,11 @@ TEST(EmployeesControllerTest, HasEmployeeWithIdTest)
 	employeesController.AddEmployee(e1);
 	employeesController.AddEmployee(e2);
 
-	EXPECT_EQ(employeesController.HasEmployeeWithId(1), true);
-	EXPECT_EQ(employeesController.HasEmployeeWithId(10), false);
+	EXPECT_EQ(employeesController.HasObjectWithId(1), true);
+	EXPECT_EQ(employeesController.HasObjectWithId(10), false);
 
-	EXPECT_EQ(employeesController.HasEmployeeWithName("e2"), true);
-	EXPECT_EQ(employeesController.HasEmployeeWithName("e3"), false); 
+	EXPECT_EQ(employeesController.HasObjectWithName("e2"), true);
+	EXPECT_EQ(employeesController.HasObjectWithName("e3"), false);
 }
 
 TEST(EmployeesControllerTest, GetAllEmployeesTest)
@@ -65,7 +65,7 @@ TEST(EmployeesControllerTest, GetAllEmployeesDataTest)
 	employeesController.AddEmployee(e1);
 	employeesController.AddEmployee(e2);
 
-	EXPECT_EQ(employeesController.GetAllEmployeesData(), "employees list:\n" + e1->GetEmployeeData() + e2->GetEmployeeData());
+	EXPECT_EQ(employeesController.GetAllObjectsData(), "employees list:\n" + e1->GetEmployeeData() + e2->GetEmployeeData());
 }
 
 TEST(EmployeesControllerTest, RemoveEmployeeTest)
@@ -78,11 +78,11 @@ TEST(EmployeesControllerTest, RemoveEmployeeTest)
 	employeesController.AddEmployee(e1);
 	employeesController.AddEmployee(e2);
 
-	employeesController.RemoveEmployeeById(1);
+	employeesController.RemoveObjectById(1);
 
-	EXPECT_EQ(employeesController.HasEmployeeWithId(1), false);
-	EXPECT_EQ(employeesController.HasEmployeeWithId(2), true);
+	EXPECT_EQ(employeesController.HasObjectWithId(1), false);
+	EXPECT_EQ(employeesController.HasObjectWithId(2), true);
 
-	EXPECT_EQ(employeesController.HasEmployeeWithName("e1"), false);
-	EXPECT_EQ(employeesController.HasEmployeeWithName("e2"), true);
+	EXPECT_EQ(employeesController.HasObjectWithName("e1"), false);
+	EXPECT_EQ(employeesController.HasObjectWithName("e2"), true);
 }
