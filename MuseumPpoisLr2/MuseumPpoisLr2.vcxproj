@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -153,6 +153,7 @@
     <ClInclude Include="Employee.h" />
     <ClInclude Include="EmployeesController.h" />
     <ClInclude Include="Exhibit.h" />
+    <ClInclude Include="ExhibitsController.h" />
     <ClInclude Include="Guard.h" />
     <ClInclude Include="Guide.h" />
     <ClInclude Include="IdNotAcceptableException.h" />

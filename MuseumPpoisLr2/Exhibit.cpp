@@ -22,6 +22,16 @@ namespace MuseumNamespace
 		_description = description;
 	}
 
+	bool Exhibit::GetBrokenState()
+	{
+		return _isBroken;
+	}
+
+	void Exhibit::Brake()
+	{
+		_isBroken = true;
+	}
+
 	std::string Exhibit::GetOriginCountry()
 	{
 		return _originCountry;
@@ -46,6 +56,10 @@ namespace MuseumNamespace
 	{
 		_id = id;
 		_name = name;
+		_description = "";
+		_originCountry = "";
+		_yearOfFirstAppearingInHistoricalSources = 0;
+		_isBroken = false;
 	}
 
 	Exhibit::Exhibit(int id, std::string name, std::string description, std::string originCountry, int yearOfFirstAppearingInHistoricalSources)
@@ -55,6 +69,7 @@ namespace MuseumNamespace
 		_description = description;
 		_originCountry = originCountry;
 		_yearOfFirstAppearingInHistoricalSources = yearOfFirstAppearingInHistoricalSources;
+		_isBroken = false;
 	}
 }
 

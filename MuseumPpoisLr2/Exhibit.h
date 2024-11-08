@@ -15,6 +15,8 @@ namespace MuseumNamespace
 
 		int _yearOfFirstAppearingInHistoricalSources;
 
+		bool _isBroken;
+
 	public:
 
 		virtual std::string GetName() override;
@@ -24,6 +26,10 @@ namespace MuseumNamespace
 		std::string GetDescription();
 
 		void SetDescription(std::string description);
+
+		bool GetBrokenState();
+
+		void Brake();
 
 		std::string GetOriginCountry();
 
