@@ -127,8 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cashier.cpp" />
     <ClCompile Include="Cleaner.cpp" />
     <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="EmployeesController.cpp" />
     <ClCompile Include="Guard.cpp" />
     <ClCompile Include="Guide.cpp" />
     <ClCompile Include="jobs.h" />
@@ -141,6 +143,7 @@
     <ClInclude Include="Cashier.h" />
     <ClInclude Include="Cleaner.h" />
     <ClInclude Include="Employee.h" />
+    <ClInclude Include="EmployeesController.h" />
     <ClInclude Include="Guard.h" />
     <ClInclude Include="Guide.h" />
     <ClInclude Include="IPerson.h" />

@@ -36,11 +36,19 @@ namespace MuseumNamespace
 
 		std::string AskAboutJob();
 
+		Employee();
+
 		Employee(std::string name, int id);
 
 		Employee(std::string name, int id, int relationToJob);
 
 		Employee(std::string name, int id, int relationToJob, double monthlyWage);
+
+		bool operator==(const Employee& employee)const;
+
+		bool operator!=(const Employee& employee);
+
+		Employee& operator=(const Employee& employee);
 	};
 }
 

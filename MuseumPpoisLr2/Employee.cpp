@@ -12,6 +12,14 @@ namespace MuseumNamespace
 		return "I " + GetRelationToJobAsString() + " my job.";
 	}
 
+	Employee::Employee()
+	{
+		_name = "";
+		_id = -1;
+		_relationToJob = 2;
+		_monthlyWage = DefaultMonthlyWage;
+	}
+
 	std::string Employee::GetJobAsString()
 	{
 		return "any";
@@ -76,6 +84,19 @@ namespace MuseumNamespace
 		_id = id;
 		_relationToJob = relationToJob;
 		_monthlyWage = _monthlyWage;
-		SetMonthlyWage(monthlyWage);
+	}
+	bool Employee::operator==(const Employee& employee)const
+	{
+		if (_name == employee._name && _id == employee._id) return true;
+		return false;
+	}
+	bool Employee::operator!=(const Employee& employee)
+	{
+		return false;
+	}
+	Employee& Employee::operator=(const Employee& employee)
+	{
+		Employee newEmployee(employee._name, employee._id, employee._relationToJob, employee._monthlyWage);
+		return newEmployee;
 	}
 }

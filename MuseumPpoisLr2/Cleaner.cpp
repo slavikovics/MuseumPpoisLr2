@@ -12,7 +12,7 @@ namespace MuseumNamespace
 
 	std::string Cleaner::GetJobAsString()
 	{
-		return "guide";
+		return "cleaner";
 	}
 
 	std::string Cleaner::InteractionWithVisitor(Person& visitor)

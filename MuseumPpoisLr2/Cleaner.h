@@ -1,4 +1,6 @@
-#pragma once
+#ifndef CLEANER_H
+#define CLEANER_H
+
 #include "Employee.h"
 
 namespace MuseumNamespace
@@ -17,3 +19,4 @@ namespace MuseumNamespace
     };
 }
 
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GUIDE_H
+#define GUIDE_H
+
 #include "Employee.h"
 
 namespace MuseumNamespace
@@ -16,3 +18,5 @@ namespace MuseumNamespace
         Guide(std::string name, int id, int relationToJob);
     };
 }
+
+#endif

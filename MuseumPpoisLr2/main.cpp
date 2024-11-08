@@ -1,7 +1,9 @@
 #include <iostream>
 #include "Employee.h"
 #include "Guard.h"
+#include "Cashier.h"
 #include "Visitor.h"
+#include "EmployeesController.h"
 
 using namespace MuseumNamespace;
 
@@ -21,16 +23,22 @@ int main()
 	std::cout << employee1.InteractionWithVisitor(person) << std::endl;
 	std::cout << employee2.InteractionWithVisitor(person) << std::endl << std::endl;
 
-	Guard guard("Jeffrey", 4, 1);
-	std::cout << "name: " << guard.GetName() << std::endl;
-	std::cout << "id: " << guard.GetId() << std::endl;
-	std::cout << "job: " << guard.AskAboutJob() << std::endl << std::endl;
-	std::cout << guard.InteractionWithVisitor(person) << std::endl << std::endl;
+	Cashier cashier("Jeffrey", 4, 1);
+	std::cout << "name: " << cashier.GetName() << std::endl;
+	std::cout << "id: " << cashier.GetId() << std::endl;
+	std::cout << "job: " << cashier.AskAboutJob() << std::endl << std::endl;
+	std::cout << cashier.InteractionWithVisitor(person) << std::endl << std::endl;
 
 	Visitor visitor("Jane", 1);
 
-	std::cout << guard.InteractionWithVisitor(visitor) << std::endl;
+	std::cout << cashier.InteractionWithVisitor(visitor) << std::endl;
 	std::cout << visitor.BrakeExhibit() << std::endl;
+
+	EmployeesController employeesController = EmployeesController();
+	employeesController.AddEmployee(cashier);
+	employeesController.AddEmployee(employee1);
+	employeesController.AddEmployee(employee2);
+	std::cout << employeesController.GetAllEmployeesData() << std::endl;
 
 	return 0;
 }

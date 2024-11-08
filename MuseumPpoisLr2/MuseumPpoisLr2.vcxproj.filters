@@ -60,6 +60,12 @@
     <ClCompile Include="Cleaner.cpp">
       <Filter>Employees</Filter>
     </ClCompile>
+    <ClCompile Include="Cashier.cpp">
+      <Filter>Employees</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeesController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IPerson.h">
@@ -87,6 +93,9 @@
       <Filter>Employees</Filter>
     </ClInclude>
     <ClInclude Include="Cashier.h">
+      <Filter>Employees</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeesController.h">
       <Filter>Employees</Filter>
     </ClInclude>
   </ItemGroup>

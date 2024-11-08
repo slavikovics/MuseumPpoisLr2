@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GUARD_H
+#define GUARD_H
+
 #include "Employee.h"
 
 namespace MuseumNamespace
@@ -17,4 +19,4 @@ namespace MuseumNamespace
     };
 }
 
-
+#endif
