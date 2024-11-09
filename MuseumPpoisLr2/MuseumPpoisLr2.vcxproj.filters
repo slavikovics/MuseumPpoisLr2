@@ -73,7 +73,6 @@
       <Filter>Museum</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="jobs.h" />
     <ClCompile Include="Cashier.cpp">
       <Filter>Employees\Cashier</Filter>
     </ClCompile>

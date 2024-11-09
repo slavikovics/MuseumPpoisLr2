@@ -12,11 +12,6 @@ namespace MuseumNamespace
 		HireEmployees();
 	}
 
-	void Museum::Close()
-	{
-		FireEmployees();
-	}
-
 	void Museum::HireEmployees()
 	{
 		Cashier* cashier = new Cashier("defaultCashier", 1);
@@ -29,20 +24,15 @@ namespace MuseumNamespace
 		employeesController.AddEmployee(guide);
 	}
 
-	void Museum::FireEmployees()
-	{
-		while (employeesController.GetAllEmployees().size() > 0) employeesController.GetAllEmployees().pop_back();
-	}
-
 	void Museum::UpdateVisitorsStatuses()
 	{
-		
+		visitorsController.CheckGuideAskedAssistance(employeesController);
+		visitorsController.CheckLitter(employeesController);
 	}
 
 	void Museum::CalendarMonthEnded()
 	{
 		bankAccount.CountMonthlyCostOfWages(employeesController);
-		if (bankAccount.IsBancrupt()) Close();
 	}
 }
 

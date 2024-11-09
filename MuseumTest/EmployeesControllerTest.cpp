@@ -66,6 +66,9 @@ TEST(EmployeesControllerTest, GetAllEmployeesDataTest)
 	employeesController.AddEmployee(e2);
 
 	EXPECT_EQ(employeesController.GetAllObjectsData(), "employees list:\n" + e1->GetEmployeeData() + e2->GetEmployeeData());
+
+	employeesController.RemoveObjectByName("e1");
+	EXPECT_EQ(employeesController.FindEmployeeByName("e2"), employeesController.FindEmployeeById(2));
 }
 
 TEST(EmployeesControllerTest, RemoveEmployeeTest)
@@ -79,6 +82,24 @@ TEST(EmployeesControllerTest, RemoveEmployeeTest)
 	employeesController.AddEmployee(e2);
 
 	employeesController.RemoveObjectById(1);
+
+	try
+	{
+		employeesController.RemoveObjectByName("e4");
+	}
+	catch (PersonNotFoundException exception)
+	{
+		EXPECT_EQ(exception.GetMessage(), "Person with name e4 was not found.");
+	}
+
+	try
+	{
+		employeesController.RemoveObjectById(4);
+	}
+	catch (PersonNotFoundException exception)
+	{
+		EXPECT_EQ(exception.GetMessage(), "Person with id 4 was not found.");
+	}
 
 	EXPECT_EQ(employeesController.HasObjectWithId(1), false);
 	EXPECT_EQ(employeesController.HasObjectWithId(2), true);

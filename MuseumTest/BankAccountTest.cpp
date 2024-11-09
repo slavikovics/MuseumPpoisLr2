@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "../MuseumPpoisLr2/BankAccount.h"
+#include "../MuseumPpoisLr2/Museum.h"
 
 using namespace MuseumNamespace;
 
@@ -20,4 +21,14 @@ TEST(BancAccountTest, IsBancruptTest)
 
 	bankAccount.IncreaseBalance(10);
 	EXPECT_EQ(bankAccount.IsBancrupt(), false);
+}
+
+TEST(BancAccountTest, CountMonthlyCostOfWages)
+{
+	Museum museum;
+	double oldBalance = museum.bankAccount.GetMoney();
+	museum.bankAccount.CountMonthlyCostOfWages(museum.employeesController);
+	double newBalance = museum.bankAccount.GetMoney();
+
+	EXPECT_EQ(oldBalance - newBalance, 1200);
 }

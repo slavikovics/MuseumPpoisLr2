@@ -23,6 +23,11 @@ namespace MuseumNamespace
 		return _message.c_str();
 	}
 
+	std::string PersonNotFoundException::GetMessage()
+	{
+		return _message;
+	}
+
 	void PersonNotFoundException::BuildExceptionMessage()
 	{
 		if (_wasSearchedById == false)

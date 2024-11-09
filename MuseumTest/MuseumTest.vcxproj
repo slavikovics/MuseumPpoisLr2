@@ -101,6 +101,9 @@
   <ItemGroup>
     <ClCompile Include="BankAccountTest.cpp" />
     <ClCompile Include="EmployeesControllerTest.cpp" />
+    <ClCompile Include="EmployeesTest.cpp" />
+    <ClCompile Include="ExhibitControllerTest.cpp" />
+    <ClCompile Include="ExhibitTest.cpp" />
     <ClCompile Include="PersonTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

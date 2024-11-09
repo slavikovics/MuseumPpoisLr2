@@ -138,7 +138,6 @@
     <ClCompile Include="Guard.cpp" />
     <ClCompile Include="Guide.cpp" />
     <ClCompile Include="IdNotAcceptableException.cpp" />
-    <ClCompile Include="jobs.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Museum.cpp" />
     <ClCompile Include="Person.cpp" />

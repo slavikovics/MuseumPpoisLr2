@@ -70,6 +70,8 @@ TEST(VisitorTest, BuyTicketTest)
 {
 	Museum museum;
 	BuyableItem buyableItem = BuyableItem(1, "", 20);
+	std::string buyableItemName = buyableItem.GetName();
+	int buyableItemId = buyableItem.GetId();
 
 	Visitor visitor1 = Visitor("v1", 1);
 	museum.visitorsController.AddVisitor(&visitor1);

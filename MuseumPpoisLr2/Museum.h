@@ -25,11 +25,7 @@ namespace MuseumNamespace
 
 		void Open();
 
-		void Close();
-
 		void HireEmployees();
-
-		void FireEmployees();
 
 		void UpdateVisitorsStatuses();
 

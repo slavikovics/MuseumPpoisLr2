@@ -14,6 +14,8 @@ namespace MuseumNamespace
 
 		PersonNotFoundException(int personId);
 
+		std::string GetMessage();
+
 		virtual const char* what() const noexcept override;
 
 	private: 
