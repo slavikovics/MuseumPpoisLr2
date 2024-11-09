@@ -12,7 +12,7 @@ namespace MuseumNamespace
 
         const std::string GuideJobString = "guide";
 
-        const std::string GuideResponse = ": takes out of the museum visitor ";
+        const std::string GuideResponse = ": shows exhibit to a visitor ";
 
     public:
 
