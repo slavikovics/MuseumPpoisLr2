@@ -12,11 +12,11 @@ namespace MuseumNamespace
 
 	std::string Guide::GetJobAsString()
 	{
-		return "guide";
+		return GuideJobString;
 	}
 
 	std::string Guide::InteractionWithVisitor(Person& visitor)
 	{
-		return GetName() + ": shows exhibit to a visitor " + visitor.GetName();
+		return GetName() + GuideResponse + visitor.GetName();
 	}
 }

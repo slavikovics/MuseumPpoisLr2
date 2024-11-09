@@ -12,11 +12,11 @@ namespace MuseumNamespace
 
 	std::string Cashier::GetJobAsString()
 	{
-		return "cashier";
+		return CashierJobString;
 	}
 
 	std::string Cashier::InteractionWithVisitor(Person& visitor)
 	{
-		return GetName() + ": sells item to a visitor " + visitor.GetName();
+		return GetName() + CashierResponse + visitor.GetName();
 	}
 }

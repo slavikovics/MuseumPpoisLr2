@@ -13,11 +13,11 @@ namespace MuseumNamespace
 
 	std::string Guard::GetJobAsString()
 	{
-		return "guard";
+		return GuardJobString;
 	}
 
 	std::string Guard::InteractionWithVisitor(Person& visitor)
 	{
-		return GetName() + ": takes out of the museum visitor " + visitor.GetName();
+		return GetName() + GuardResponse + visitor.GetName();
 	}
 }

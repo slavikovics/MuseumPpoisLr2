@@ -7,6 +7,13 @@ namespace MuseumNamespace
 {
     class Guide : public Employee
     {
+
+    private:
+
+        const std::string GuideJobString = "guide";
+
+        const std::string GuideResponse = ": takes out of the museum visitor ";
+
     public:
 
         virtual std::string InteractionWithVisitor(Person& visitor) override;

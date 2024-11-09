@@ -7,6 +7,13 @@ namespace MuseumNamespace
 {
     class Cashier : public Employee
     {
+
+    private:
+
+        const std::string CashierJobString = "cashier";
+
+        const std::string CashierResponse = ": sells item to a visitor ";
+
     public:
 
         virtual std::string InteractionWithVisitor(Person& visitor) override;
